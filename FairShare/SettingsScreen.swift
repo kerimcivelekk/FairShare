@@ -8,8 +8,23 @@
 import SwiftUI
 
 struct SettingsScreen: View {
+    
+    @Environment(\.presentationMode) var presentationMode
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            Button(action: {
+                presentationMode.wrappedValue.dismiss()
+            }) {
+                Text("Kapat")
+                    .padding()
+                    .background(Color.red)
+                    .foregroundColor(.white)
+                    .cornerRadius(10)
+            }
+            
+        }
+        
     }
 }
 
