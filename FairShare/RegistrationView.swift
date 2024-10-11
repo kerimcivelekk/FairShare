@@ -53,9 +53,7 @@ struct RegistrationView: View {
                         .cornerRadius(10)
                     }
                     
-                    NavigationLink(destination: TelephoneRegisterView(), isActive: $showRegistrationView){
-                        EmptyView()
-                    }
+                 
                     
                     // Google ile giriş
                     Button(action: {
@@ -98,6 +96,10 @@ struct RegistrationView: View {
                     
                 }
                 .padding()
+                
+                NavigationLink(destination: TelephoneRegisterView(), isActive: $showRegistrationView){
+                    EmptyView()
+                }
             }
         }}
 
